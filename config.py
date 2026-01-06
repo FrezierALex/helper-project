@@ -1,0 +1,5 @@
+import os
+
+DISCORD_WEBHOOK_URL = os.environ.get('DISCORD_WEBHOOK_URL')
+DISCORD_BOT_TOKEN = os.environ.get('DISCORD_BOT_TOKEN')
+COMMAND_CHANNEL_ID = os.environ.get('COMMAND_CHANNEL_ID')
