@@ -8,7 +8,7 @@ import time
 import shutil
 from datetime import datetime, timedelta
 from cryptography.fernet import Fernet
-from config import DISCORD_WEBHOOK_URL, DISCORD_BOT_TOKEN, COMMAND_CHANNEL_ID
+from config.py import DISCORD_WEBHOOK_URL, DISCORD_BOT_TOKEN, COMMAND_CHANNEL_ID
 
 # In-memory data storage
 INTERNAL_DATA = {
